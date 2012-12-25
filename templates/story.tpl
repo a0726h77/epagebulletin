@@ -2,7 +2,7 @@
 
 <div class="news">
     {block name="slugline"}
-  <h1 class="slugline">{if $showLink}<a href="{$link}">{/if}{$title}{if $showLink}</a>{/if}</h1>
+  <h1 class="slugline">{$title}</h1>
   {/block}
 
   <div id="storysubhead">
@@ -23,15 +23,6 @@
   </div><!--storysubhead-->
   
   <div id="story">
-    {block name="image"}
-    {if $pager['pageNumber'] == 0}
-        {if $image && $showBodyThumbnail}
-          <div id="image">
-            <img class="thumbnail" src="{$image['src']}" />
-          </div>
-        {/if}
-    {/if}
-    {/block}
     {block name="body"}    
     <span id="storybody">
       {include file="findInclude:common/templates/pager.tpl"}
